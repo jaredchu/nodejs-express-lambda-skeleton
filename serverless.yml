@@ -1,0 +1,20 @@
+service: Sendcloud-Integration
+plugins:
+  - serverless-dotenv-plugin
+provider:
+  name: aws
+  runtime: nodejs14.x
+  stage: ${env:STAGE}
+  region: eu-west-2
+  memorySize: 128
+  environment:
+    PORT: ${env:PORT}
+    STAGE: ${env:STAGE}
+functions:
+  app:
+    handler: serverless.handler
+    events:
+      - http:
+          path: /
+          method: ANY
+          cors: true
