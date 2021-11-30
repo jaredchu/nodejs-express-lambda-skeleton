@@ -3,7 +3,7 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Sendcloud Integration' });
+  res.render('index', { title: process.env.PROJECT_NAME });
 });
 
 module.exports = router;

@@ -1,4 +1,4 @@
-Sendcloud Integration
+Nodejs Express Lambda Skeleton
 
 # Installation & development
 ```shell
